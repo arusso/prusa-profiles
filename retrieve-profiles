@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Retrieve our custom profiles
+
+PRUSASLICER_ROOT="$HOME/Library/Application Support/PrusaSlicer"
+
+for profile_type in filament cache printer print sla_material sla_print vendor; do
+  mkdir $profile_type &>/dev/null
+  cp "$PRUSASLICER_ROOT/$profile_type"/* "$profile_type/" &>/dev/null
+done

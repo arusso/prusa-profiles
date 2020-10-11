@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Retrieve our custom profiles
+
+PRUSASLICER_ROOT="$HOME/Library/Application Support/PrusaSlicer"
+
+for profile in "$@"; do
+  echo "restoring: $profile"
+  cp "$profile" "$PRUSASLICER_ROOT/$profile"
+done

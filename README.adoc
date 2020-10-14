@@ -4,7 +4,7 @@ Backups of my various printer profiles for you to peruse.
 
 To backup:
 
-    retrieve-profiles
+    ./retrieve-profiles
 
 To restore a profile:
 

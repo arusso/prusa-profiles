@@ -4,6 +4,11 @@
 
 PRUSASLICER_ROOT="$HOME/Library/Application Support/PrusaSlicer"
 
+if [[ $1 == "alpha" || $1 == "beta" ]]; then
+  PRUSASLICER_ROOT="$PRUSASLICER_ROOT-${1}"
+  shift
+fi
+
 for profile in "$@"; do
   echo "restoring: $profile"
   cp -f "$profile" "$PRUSASLICER_ROOT/$profile"
